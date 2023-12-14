@@ -66,4 +66,4 @@ class SessionDeleteOtherView(LoginRequiredMixin, SessionMixin, DeletionMixin, Vi
             exclude(session_key=self.request.session.session_key)
 
     def get_success_url(self):
-        return str(reverse_lazy('user_sessions:session_list'))
+        return str(reverse_lazy('profile'))
